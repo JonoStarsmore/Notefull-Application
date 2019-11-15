@@ -10,6 +10,7 @@ import AddNote from '../AddNote/AddNote'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import './App.css'
+import ErrorBoundary from '../ErrorBoundary'
 
 class App extends Component {
   state = {
@@ -141,7 +142,9 @@ class App extends Component {
             </h1>
           </header>
           <main className='App__main'>
-            {this.renderMainRoutes()}
+           <ErrorBoundary>
+             {this.renderMainRoutes()}
+           </ErrorBoundary>
           </main>
         </div>
       </ApiContext.Provider>

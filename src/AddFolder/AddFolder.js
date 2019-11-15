@@ -41,7 +41,7 @@ export default class AddFolder extends Component {
 
   render() {
     return (
-    <ErrorBoundary>
+    
       <section className='AddFolder'>
         <h2>Create a folder</h2>
         <NotefulForm onSubmit={this.handleSubmit}>
@@ -49,7 +49,7 @@ export default class AddFolder extends Component {
             <label htmlFor='folder-name-input'>
               Name
             </label>
-            <input type='text' id='folder-name-input' name='folder-name' />
+            <input type='text' id='folder-name-input' name='folder-name' required />
           </div>
           <div className='buttons'>
             <button type='submit'>
@@ -58,7 +58,7 @@ export default class AddFolder extends Component {
           </div>
         </NotefulForm>
       </section>
-    </ErrorBoundary>
-    )
+    
+)
   }
 }
