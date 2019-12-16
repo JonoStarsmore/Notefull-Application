@@ -6,6 +6,7 @@ import CircleButton from '../CircleButton/CircleButton'
 import ApiContext from '../ApiContext'
 import { getNotesForFolder } from '../notes-helpers'
 import './NoteListMain.css'
+import PropTypes from 'PropTypes'
 
 export default class NoteListMain extends React.Component {
   static defaultProps = {
@@ -47,4 +48,10 @@ export default class NoteListMain extends React.Component {
       </section>
     )
   }
+}
+
+NotePageNav.PropTypes = {
+  match: PropTypes.shape({
+    goBack: PropTypes.object.isRequired
+  })
 }
