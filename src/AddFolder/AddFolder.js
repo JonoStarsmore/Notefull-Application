@@ -4,6 +4,7 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import './AddFolder.css'
 import ErrorBoundary from '../ErrorBoundary'
+import PropTypes from 'prop-types'
 
 export default class AddFolder extends Component {
   static defaultProps = {
@@ -61,4 +62,10 @@ export default class AddFolder extends Component {
     
 )
   }
+}
+
+AddNote.PropTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 }

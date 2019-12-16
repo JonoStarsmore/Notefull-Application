@@ -3,6 +3,7 @@ import NotefulForm from '../NotefulForm/NotefulForm'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import './AddNote.css'
+import PropTypes from 'prop-types'
 
 export default class AddNote extends Component {
   static defaultProps = {
@@ -81,4 +82,10 @@ export default class AddNote extends Component {
       </section>
     )
   }
+}
+
+AddNote.PropTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  })
 }
