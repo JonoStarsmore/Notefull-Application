@@ -43,3 +43,9 @@ export default class NotePageNav extends React.Component {
     )
   }
 }
+
+NotePageNav.PropTypes = {
+  history: PropTypes.shape({
+    goBack: PropTypes.func.isRequired
+  })
+}

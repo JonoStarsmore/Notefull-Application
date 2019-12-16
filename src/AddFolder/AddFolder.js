@@ -64,7 +64,7 @@ export default class AddFolder extends Component {
   }
 }
 
-AddNote.PropTypes = {
+AddFolder.PropTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
   })
