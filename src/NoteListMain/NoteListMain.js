@@ -50,7 +50,7 @@ export default class NoteListMain extends React.Component {
   }
 }
 
-NotePageNav.PropTypes = {
+NoteListMain.PropTypes = {
   match: PropTypes.shape({
     goBack: PropTypes.object.isRequired
   })
